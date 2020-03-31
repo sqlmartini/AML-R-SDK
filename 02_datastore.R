@@ -8,8 +8,8 @@ ws <- get_workspace("azureml",
                     auth = auth)
 
 #Service principal details
-clientId <- "a421c122-f44c-4595-b511-b6c35d217716"
-clientSecret <- "DX]LLDtD1lGyYzG[/8YtDJx]RbbjdV34"
+clientId <- ""
+clientSecret <- ""
 
 #Register ADLS datastore
 register_azure_data_lake_gen2_datastore(workspace = ws, 
