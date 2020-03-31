@@ -1,5 +1,4 @@
 library(azuremlsdk)
-get_current_run()
 
 #Authenticate to AML workspace
 interactive_auth <- interactive_login_authentication(tenant_id = '72f988bf-86f1-41af-91ab-2d7cd011db47')
