@@ -7,6 +7,7 @@ R scripts:
 - **01_authentication.R**:  shows how to authenticate to an AML workspace.  Showcases how to use AAD tenant ID for those that have accounts guested into multiple AAD tenants.
 - **02_datastore.R**:  shows how to register ADLSv2 storage and account and then retrieve datastore object by name.
 - **03_dataset.R**:  shows how to register a tabular dataset and then load into a dataframe.
+- **04_writeToStorage.R**:  shows how to write a dataframe to Azure storage.
 
 Full SDK Reference:
 https://azure.github.io/azureml-sdk-for-r/reference/index.html
