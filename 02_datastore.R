@@ -1,10 +1,12 @@
+library(azuremlsdk)
+
 #Authenticate to AML workspace
 tenantId <- "72f988bf-86f1-41af-91ab-2d7cd011db47"
 auth <- interactive_login_authentication(tenant_id = tenantId)
 
-ws <- get_workspace("azureml",
-                    "4b395f5d-d1ab-4bae-808d-a4398c9c61c5",
-                    "azureml",
+ws <- get_workspace(name = "azureml",
+                    subscription_id = "4b395f5d-d1ab-4bae-808d-a4398c9c61c5",
+                    resource_group = "azureml",
                     auth = auth)
 
 #Service principal details
