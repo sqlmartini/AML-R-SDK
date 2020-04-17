@@ -4,10 +4,10 @@ library(azuremlsdk)
 ws <- load_workspace_from_config()
 
 #Get datastore object
-ds <- get_datastore(ws, "oj_sales")
+ds <- get_datastore(ws, 'oj_sales')
 
 #Path to file(s) in datastore
-ds_paths <- list(data_path(ds, "OJ_Sales.csv"))
+ds_paths <- list(data_path(ds, 'OJ_Sales.csv'))
 
 #Create dataset object
 dataset <- create_tabular_dataset_from_delimited_files(path = ds_paths, 
@@ -26,7 +26,7 @@ register_dataset(workspace = ws,
                  create_new_version = FALSE)
 
 #Get registered dataset by name
-dataset <- get_dataset_by_name(workspace = ws, name = "oj_sales")
+dataset <- get_dataset_by_name(workspace = ws, name = 'oj_sales')
 
 #Load dataset into dataframe
 df <- load_dataset_into_data_frame(dataset)

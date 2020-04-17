@@ -4,7 +4,7 @@ library(azuremlsdk)
 ws <- load_workspace_from_config()
 
 #Get registered dataset by name
-dataset <- get_dataset_by_name(workspace = ws, name = "oj_sales")
+dataset <- get_dataset_by_name(workspace = ws, name = 'oj_sales')
 
 #Load dataset into dataframe
 df <- load_dataset_into_data_frame(dataset)
@@ -23,5 +23,5 @@ file <- paste(targetDir, '/test.csv', sep='')
 write.csv(x = df, file = file)
 
 #Optional upload to different registered datastore
-ds <- get_datastore(ws, "workspaceblobstore")
+ds <- get_datastore(ws, 'workspaceblobstore')
 upload_to_datastore(ds, targetDir)
