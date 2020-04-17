@@ -1,7 +1,7 @@
 library(azuremlsdk)
 
 #Authenticate to AML workspace.  Pre-req to write config file done in 01_authentication.R
-ws <- load_workspace_from_config(path = config_path)
+ws <- load_workspace_from_config()
 
 #Get registered dataset by name
 dataset <- get_dataset_by_name(workspace = ws, name = "oj_sales")

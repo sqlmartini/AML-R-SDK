@@ -1,7 +1,7 @@
 library(azuremlsdk)
 
 #Authenticate to AML workspace.  Pre-req to write config file done in 01_authentication.R
-ws <- load_workspace_from_config(path = config_path)
+ws <- load_workspace_from_config()
 
 #Service principal details used to authenticate to ADLS data store
 #https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal

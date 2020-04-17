@@ -18,8 +18,7 @@ ws <- get_workspace(name = amlWorkspaceName,
                     auth = interactive_auth)
 
 #Create authentication config file to simplify future authentication.  A hidden folder (.azureml) will be created with a config.json file.
-config_path = getwd()
-write_workspace_config(ws, path = config_path)
+write_workspace_config(ws)
 
 #Then future authentication could use the config file for a simplified authentication process
-ws <- load_workspace_from_config(path = config_path)
+ws <- load_workspace_from_config()
