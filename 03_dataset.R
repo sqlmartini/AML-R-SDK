@@ -1,11 +1,7 @@
-#Authenticate to AML workspace
-tenantId <- "72f988bf-86f1-41af-91ab-2d7cd011db47"
-auth <- interactive_login_authentication(tenant_id = tenantId)
+library(azuremlsdk)
 
-ws <- get_workspace(name = "azureml",
-                    subscription_id = "4b395f5d-d1ab-4bae-808d-a4398c9c61c5",
-                    resource_group = "azureml",
-                    auth = auth)
+#Authenticate to AML workspace.  Pre-req to write config file done in 01_authentication.R
+ws <- load_workspace_from_config(path = config_path)
 
 #Get datastore object
 ds <- get_datastore(ws, "oj_sales")
